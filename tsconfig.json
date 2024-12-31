@@ -4,8 +4,10 @@
     "strict": true,
     "paths": {
       "@/*": [
-        "./*"
-      ]
+        "./*",
+      ],
+      "@constants/*": ["constants/*"] // Map '@constants/' to 'constants/'
+
     }
   },
   "include": [
