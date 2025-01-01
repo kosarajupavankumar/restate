@@ -1,4 +1,4 @@
-import {SplashScreen, Stack} from "expo-router";
+import { SplashScreen, Stack } from "expo-router";
 
 import "./global.css";
 import React, { useEffect } from "react";
@@ -17,18 +17,18 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
-    if(fontsLoaded){
+    if (fontsLoaded) {
       SplashScreen.hideAsync();
     }
   }, [fontsLoaded]);
 
-  if(!fontsLoaded){
+  if (!fontsLoaded) {
     return null;
   }
 
   return (
-      <GlobalProvider>
-        <Stack screenOptions={ { headerShown : false}}/>
-      </GlobalProvider>
-      );
+    <GlobalProvider>
+      <Stack screenOptions={{ headerShown: false }} />
+    </GlobalProvider>
+  );
 }
